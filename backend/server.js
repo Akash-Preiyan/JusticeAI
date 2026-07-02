@@ -17,7 +17,7 @@ const app = express();
 app.use(cors({
   origin: [
     "http://localhost:5173",
-    "https://justiceaifrontend.vercel.app/"
+    "https://justiceaifrontend.vercel.app"
   ],
   credentials: true
 }));
