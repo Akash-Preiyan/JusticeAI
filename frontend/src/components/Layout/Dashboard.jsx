@@ -21,12 +21,12 @@ export default function Dashboard() {
   ];
   const token = sessionStorage.getItem('token')
   const navigate = useNavigate()
-
+  const BACKEND_URL = "https://justiceai-backend.onrender.com"
   useEffect(()=>{
     try{
       const fetchUser = async () => {
 
-        const response = await axios.get('http://localhost:5000/api/auth/me', {
+        const response = await axios.get(`${BACKEND_URL}/api/auth/me`, {
           headers : {
             Authorization : `Bearer ${token}`
           }

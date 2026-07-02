@@ -14,7 +14,13 @@ import dashboardRoutes from "./routes/dashboardRoutes.js"
 const app = express();
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: [
+    "http://localhost:5173",
+    "https://justiceai.vercel.app"
+  ],
+  credentials: true
+}));
 app.use(express.json());
 
 // Routes
@@ -38,11 +44,11 @@ app.get("/health", (req, res) => {
 
 // MongoDB Connection
 mongoose.connect(process.env.MONGO_URI)
-  .then(() => console.log("✅ MongoDB connected successfully"))
+  .then(() => console.log(" MongoDB connected successfully"))
   .catch((err) => console.error("MongoDB connection error:", err));
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
-  console.log(`🚀 Server running on port ${PORT}`);
-  console.log(`🔍 Legal Research API available at: http://localhost:${PORT}/api/legal-research`);
+  console.log(` Server running on port ${PORT}`);
+  console.log(` Legal Research API available at: http://localhost:${PORT}/api/legal-research`);
 });
