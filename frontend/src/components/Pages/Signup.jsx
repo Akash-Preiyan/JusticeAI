@@ -3,7 +3,7 @@ import { Scale } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 
 const Signup = () => {
-
+  const BACKEND_URL = "https://justiceai-backend.onrender.com"
   const [formdata, Setformdata] = useState({
     fullName: "",
     email: "",
@@ -64,7 +64,7 @@ const Signup = () => {
     if (Object.keys(newErrors).length === 0) {
 
       fetch(
-        "http://localhost:5000/api/auth/signup",
+        `${BACKEND_URL}/api/auth/signup`,
         {
           method: "POST",
 

@@ -5,6 +5,7 @@ import { Link,  useNavigate } from "react-router-dom";
 
 
 const Login = () => {
+  const BACKEND_URL = "https://justiceai-backend.onrender.com"
   const navigate = useNavigate();
   const [formdata, setFormdata] = useState({
     email: "",
@@ -34,7 +35,7 @@ const Login = () => {
     setErrors(newErrors);
 
     if (Object.keys(newErrors).length === 0) {
-      fetch('http://localhost:5000/api/auth/login', {
+      fetch(`${BACKEND_URL}/api/auth/login`, {
         method: 'POST',
         headers : {
           'Content-Type' : 'application/json'
