@@ -416,7 +416,7 @@ export default function MiniDashboard({
   const [loading, setLoading] = useState(true);
 
   const token = sessionStorage.getItem("token");
-
+  const BACKEND_URL = "https://justiceai-backend.onrender.com"
   useEffect(() => {
 
     const fetchDashboard = async () => {
@@ -426,7 +426,7 @@ export default function MiniDashboard({
         setLoading(true);
 
         const { data } = await axios.get(
-          "http://localhost:5000/api/Dashboard/getDashboardData",
+          `${BACKEND_URL}/api/Dashboard/getDashboardData`,
           {
             headers: {
               Authorization: `Bearer ${token}`,

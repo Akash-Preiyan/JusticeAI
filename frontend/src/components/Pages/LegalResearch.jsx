@@ -4,7 +4,7 @@ import React, { useEffect, useRef, useState, useCallback } from "react";
 // import { jwtDecode } from 'jwt-decode'
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-const API_BASE = "http://localhost:5000/api";
+const API_BASE = "https://justiceai-backend.onrender.com";
 
 // ─── Typing indicator ────────────────────────────────────────────────────────
 const TypingDots = () => (
