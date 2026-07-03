@@ -4,7 +4,7 @@ import React, { useEffect, useRef, useState, useCallback } from "react";
 // import { jwtDecode } from 'jwt-decode'
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-const API_BASE = "https://justiceai-backend.onrender.com";
+const API_BASE = "https://justiceai-backend.onrender.com/api";
 
 // ─── Typing indicator ────────────────────────────────────────────────────────
 const TypingDots = () => (
@@ -76,7 +76,7 @@ const LegalResearch = () => {
     const fetchChats = async () => {
       try {
         const { data } = await axios.get(
-          `${API_BASE}/api/chats/get_chats`,
+          `${API_BASE}/chats/get_chats`,
           authHeader()
         );
         setChats(data);
