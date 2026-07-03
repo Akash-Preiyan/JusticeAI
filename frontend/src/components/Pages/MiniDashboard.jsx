@@ -598,44 +598,44 @@ export default function MiniDashboard({
               </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-4 w-full max-w-md">
+            <div className="grid grid-cols-2 gap-4 w-full max-w-md font-bold text-[#380808]">
 
               <GlassCard className="p-5 bg-white/10 border-white/10">
-                <p className="text-xs text-[#cdb9aa] uppercase tracking-wide">
+                <p className="text-xs   uppercase tracking-wide">
                   Total Cases
                 </p>
 
-                <h2 className="text-3xl font-extrabold text-white mt-2">
+                <h2 className="text-3xl font-extrabold  mt-2">
                   {totalCases}
                 </h2>
               </GlassCard>
 
               <GlassCard className="p-5 bg-white/10 border-white/10">
-                <p className="text-xs text-[#cdb9aa] uppercase tracking-wide">
+                <p className="text-xs text-[#380808] uppercase tracking-wide">
                   Research Chats
                 </p>
 
-                <h2 className="text-3xl font-extrabold text-white mt-2">
+                <h2 className="text-3xl font-extrabold  mt-2">
                   {totalChats}
                 </h2>
               </GlassCard>
 
               <GlassCard className="p-5 bg-white/10 border-white/10">
-                <p className="text-xs text-[#cdb9aa] uppercase tracking-wide">
+                <p className="text-xs text-[#380808] uppercase tracking-wide">
                   Avg Confidence
                 </p>
 
-                <h2 className="text-3xl font-extrabold text-white mt-2">
+                <h2 className="text-3xl font-extrabold mt-2">
                   {averageConfidence}%
                 </h2>
               </GlassCard>
 
               <GlassCard className="p-5 bg-white/10 border-white/10">
-                <p className="text-xs text-[#cdb9aa] uppercase tracking-wide">
+                <p className="text-xs text-[#380808] uppercase tracking-wide">
                   AI Alignment
                 </p>
 
-                <h2 className="text-3xl font-extrabold text-white mt-2">
+                <h2 className="text-3xl font-extrabold  mt-2">
                   {averageAlignment}%
                 </h2>
               </GlassCard>

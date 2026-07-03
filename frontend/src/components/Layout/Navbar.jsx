@@ -58,9 +58,11 @@ export default function Navbar() {
             <a href="#pricing" className="block py-2 text-gray-700 hover:text-red-900">
               Pricing
             </a>
-            <button className="w-full bg-red-900 text-white px-6 py-2 rounded-lg hover:bg-red-800 transition-colors mt-2">
+            <Link 
+            to="/signup"
+            className="w-full bg-red-900 text-white px-6 py-2 rounded-lg hover:bg-red-800 transition-colors mt-2">
               Dashboard
-            </button>
+            </Link>
           
           </div>
         )}
