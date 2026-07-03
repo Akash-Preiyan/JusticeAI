@@ -76,7 +76,7 @@ const LegalResearch = () => {
     const fetchChats = async () => {
       try {
         const { data } = await axios.get(
-          `${API_BASE}/chats/get_chats`,
+          `${API_BASE}/api/chats/get_chats`,
           authHeader()
         );
         setChats(data);
