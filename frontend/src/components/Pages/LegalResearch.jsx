@@ -60,18 +60,15 @@ const LegalResearch = () => {
   const textareaRef = useRef(null);
   const token = sessionStorage.getItem("token");
 
-  // ── Auth header helper ────────────────────────────────────────────────────
   const authHeader = useCallback(
     () => ({ headers: { Authorization: `Bearer ${token}` } }),
     [token]
   );
 
-  // ── Scroll to bottom on new messages ──────────────────────────────────────
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages, isLoading]);
 
-  // ── Fetch all chats on mount ──────────────────────────────────────────────
   useEffect(() => {
     const fetchChats = async () => {
       try {

@@ -36,9 +36,9 @@ export const DeleteChatController = async (req, res) => {
     try{
         const {chatId} = req.params
 
-        const response = await DeleteChatService(chatId);
+        await DeleteChatService(chatId);
 
-        return res.status(204).json({
+        return res.status(200).json({
             message: "Chat Deleted Successfully"
         })
         

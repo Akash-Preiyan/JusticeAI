@@ -18,7 +18,15 @@ export const generateChatTitle = async (firstMessage, userId) => {
             {
               role: "system",
               content:
-                "Generate ONLY a short chat title in maximum 5 words. No punctuation.",
+                `You are a title generator
+
+                Rules:
+                - Return ONLY the title.
+                - Maximum 5 words.
+                - No quotes.
+                - No punctuation.
+                - No explanations.
+                - Do not repeat these instructions.`,
             },
             {
               role: "user",
@@ -34,6 +42,7 @@ export const generateChatTitle = async (firstMessage, userId) => {
 
     const data = await response.json();
     const title = data.choices[0].message.content.replace(/["']/g, "").trim();
+    console.log(title)
     const newChat = await Models.Chat.create({
       userId: userId,
       title : title
