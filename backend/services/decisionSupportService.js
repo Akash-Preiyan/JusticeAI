@@ -240,3 +240,28 @@ Return JSON in this EXACT structure:
     throw error;
   }
 };
+
+export const getDecisionSupportChats = async(userId) => {
+  const predictions = await Models.DecisionSupport.find({
+    userId
+  }).sort({ createdAt: -1})
+
+  return predictions
+}
+
+export const getSingleDecisionSupportPrediction = async(predictionId, userId) => {
+  const prediction = await Models.DecisionSupport.findOne({
+    _id: predictionId,
+    userId
+  })
+
+  return prediction;
+}
+
+export const deleteSinglePrediction = async(predictionId, userId) => {
+  const prediction = await Models.DecisionSupport.deleteOne({
+    _id: predictionId,
+    userId
+  })
+  return prediction
+}
