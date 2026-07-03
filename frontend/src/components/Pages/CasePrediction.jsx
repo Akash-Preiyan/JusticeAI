@@ -18,7 +18,7 @@ import {
   Zap,
 } from "lucide-react";
 
-const API_BASE = "http://localhost:5000/api";
+const API_BASE = "https://justiceai-backend.onrender.com/api";
 
 const EMPTY_DOCUMENT = {
   category: "",

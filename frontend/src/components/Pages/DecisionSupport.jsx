@@ -18,7 +18,7 @@ import {
   Zap,
 } from "lucide-react";
 
-const API_BASE = "https://justiceai-backend.onrender.com/api";
+const API_BASE = "https://justiceai-backend.onrender.com";
 
 const EMPTY_DOCUMENT = {
   category: "",
@@ -338,7 +338,7 @@ export default function DecisionSupport() {
     if (!token) return;
 
     axios
-      .get(`${API_BASE}/predictions/get_predictions`, authHeader())
+      .get(`${API_BASE}/api/DecisionSupport/get_DecisionSupport_Predictions`, authHeader())
       .then(({ data }) => setPredictions(data))
       .catch((err) => console.log(err));
   }, [token, authHeader]);
