@@ -94,7 +94,8 @@ export const generateChatMessage = async (messages) => {
   )
 
   const data = await response.json()
-
+  console.log("Status:", response.status);
+  console.log("Response:", JSON.stringify(data, null, 2));
   return data.choices[0].message.content;
 }
 
