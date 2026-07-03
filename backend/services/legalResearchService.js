@@ -56,6 +56,11 @@ export const generateChatTitle = async (firstMessage, userId) => {
 };
 
 export const generateChatMessage = async (messages) => {
+
+  const formattedMessages = messages.map((msg) => ({
+    role: msg.role,
+    content: msg.content,
+  }))
   const response = await fetch(
     "https://router.huggingface.co/v1/chat/completions",
     {
@@ -86,7 +91,7 @@ export const generateChatMessage = async (messages) => {
                   - Maximum 120 words unless necessary.
                   `,
             },
-            ...messages
+            ...formattedMessages
           ],
   
         }),
