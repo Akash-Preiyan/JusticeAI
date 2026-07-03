@@ -477,7 +477,7 @@ export default function DecisionSupport() {
     };
 
     const { data } = await axios.post(
-      `${API_BASE}/DecisionSupport/generate_Prediction`,
+      `${API_BASE}/api/DecisionSupport/generate_Prediction`,
       {
         caseData: cleanForm,
       },

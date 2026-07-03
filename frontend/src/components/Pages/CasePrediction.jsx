@@ -328,7 +328,7 @@ export default function CasePrediction() {
     if (!token) return;
 
     axios
-      .get(`${API_BASE}/predictions/get_predictions`, authHeader())
+      .get(`${API_BASE}/Case_prediction/get_predictions`, authHeader())
       .then(({ data }) => setPredictions(data))
       .catch((err) => console.log(err));
   }, [token, authHeader]);
